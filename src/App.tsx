@@ -65,14 +65,16 @@ function App() {
               The <span className="inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,#00A1E0_0%,#7FECFF_25%,#63D7E4_50%,#00A1E0_75%,#00A1E0_100%)] bg-[length:400%_100%] animate-shimmer font-extrabold">Salesforce</span>{" "}
               <span className="inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,#617f95_0%,#A5C1D9_25%,#8EABC4_50%,#617f95_75%,#617f95_100%)] bg-[length:400%_100%] animate-shimmer font-extrabold">Solopreneur</span>
               <br />
-              <span className="inline-block text-white font-extrabold">Blueprint</span>
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] font-extrabold">Blueprint</span>
             </motion.h1>
             
             {/* Subtitle with MVRK Line */}
             <motion.div variants={item} className="mb-16">
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 font-poppins">
-                Next Cohort Starting In Fall of 2025
-              </p>
+              <a href="#ready" className="inline-block">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 font-poppins hover:text-[#63D7E4] transition-colors duration-300 cursor-pointer">
+                  Next Cohort Starting In Fall of 2025
+                </p>
+              </a>
               <div className="w-32 h-1 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] mx-auto"></div>
             </motion.div>
 
@@ -91,7 +93,7 @@ function App() {
             {/* CTA Buttons */}
             <motion.div variants={item} className="flex flex-wrap gap-4 justify-center">
               <a 
-                href="#pillars" 
+                href="#ready" 
                 className="px-8 py-3 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
               >
                 <span>Inquire Now</span>
@@ -120,11 +122,12 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             className="flex items-center justify-center mb-8"
           >
-            <span className="px-4 py-1 bg-[#00BDC9]/10 text-[#63D7E4] text-sm font-medium rounded-full">
+            <span className="px-6 py-2 bg-gradient-to-r from-[#00BDC9]/20 to-[#63D7E4]/20 text-[#63D7E4] text-lg font-bold rounded-full border border-[#63D7E4]/30 shadow-lg">
               The 3 Pillars
             </span>
           </motion.div>
-          
+
+
           {/* Desktop Layout - 3 Cards Side by Side */}
           <div className="hidden md:grid md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
             {/* Course Pillar */}
@@ -133,12 +136,9 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="relative pt-8 px-1 group"
+              className="relative px-1 group"
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg hover:border-[#00BDC9]/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#00BDC9]/50 hover:shadow-2xl hover:shadow-[#00BDC9]/10 hover:scale-[1.02]">
-                <div className="absolute -top-[0.00rem] md:-top-3 -left-[0.8rem] md:-left-3 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-110 transition-transform duration-300">
-                  C
-                </div>
                 
                 {/* Decorative background elements */}
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-[#00BDC9]/5 to-[#63D7E4]/5 rounded-full blur-xl"></div>
@@ -168,7 +168,7 @@ function App() {
                   </div>
                   
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
-                    Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money. This is a real blueprint to set your foundation for success. All members get access to the latest version of the course for life.
+                    Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money. This is a real <span className="text-[#00BDC9] font-semibold">blueprint</span> to set your foundation for success. All members get access to the latest version of the course for life.
                   </p>
                   
                   {/* Progress indicator */}
@@ -187,12 +187,9 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="relative pt-8 px-1 group"
+              className="relative px-1 group"
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg hover:border-[#00BDC9]/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#00BDC9]/50 hover:shadow-2xl hover:shadow-[#63D7E4]/10 hover:scale-[1.02]">
-                <div className="absolute -top-[0.00rem] md:-top-3 -left-[0.8rem] md:-left-3 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-110 transition-transform duration-300">
-                  C
-                </div>
                 
                 {/* Decorative background elements */}
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-[#63D7E4]/5 to-[#00BDC9]/5 rounded-full blur-xl"></div>
@@ -244,12 +241,9 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="relative pt-8 px-1 group"
+              className="relative px-1 group"
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg hover:border-[#00BDC9]/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#00BDC9]/50 hover:shadow-2xl hover:shadow-[#00BDC9]/10 hover:scale-[1.02]">
-                <div className="absolute -top-[0.00rem] md:-top-3 -left-[0.8rem] md:-left-3 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-110 transition-transform duration-300">
-                  C
-                </div>
                 
                 {/* Decorative background elements */}
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-[#00BDC9]/5 to-[#63D7E4]/5 rounded-full blur-xl"></div>
@@ -403,7 +397,7 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <p className="text-base text-gray-300 leading-relaxed tracking-wide font-poppins">
-              This is a modern course, developed over years and built to help you launch your business confidently. With clear lessons based on real experience. And resources and templates that have been client tested. This is your blueprint to success.
+              This is a modern course, developed over years and built to help you launch your business confidently. With clear lessons based on real experience. And resources and templates that have been client tested. This is your <span className="text-[#00BDC9] font-semibold">blueprint</span> to success.
             </p>
           </motion.div>
           
@@ -710,7 +704,7 @@ function App() {
                 </div>
                 <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
                 <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins mb-4">
-                  Specific topics and hands on learning, all in a collaborative environment. These sessions are for members that have completed the course and have their blueprint established. These workshops ensure continuing learning and strategic development.
+                  Specific topics and hands on learning, all in a collaborative environment. These sessions are for members that have completed the course and have their <span className="text-[#00BDC9] font-semibold">blueprint</span> established. These workshops ensure continuing learning and strategic development.
                 </p>
                 
                 {/* Enhanced workshop indicators */}
@@ -782,7 +776,7 @@ function App() {
                 </div>
                 <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
                 <p className="text-sm text-gray-300 text-center font-poppins mb-3">
-                  Specific topics and hands on learning for members that have completed the course and established their blueprint.
+                  Specific topics and hands on learning for members that have completed the course and established their <span className="text-[#00BDC9] font-semibold">blueprint</span>.
                 </p>
                 <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
                   <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
@@ -1082,7 +1076,9 @@ function App() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <a 
-                href="#assessment" 
+                href="https://zfrmz.eu/rE4W92hKWnoBzvCJ6spX" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative px-8 py-4 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg font-montserrat flex items-center space-x-2 group"
               >
                 <span>Take The Assessment</span>
