@@ -168,7 +168,7 @@ function App() {
                   </div>
                   
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
-                    Lessons to help you get your business ready, find your fit clients, and deliver real value. Resources and templates to save you time and money. This is a real blueprint to set your foundation for success. All members get access to the latest version of the course for life.
+                    Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money. This is a real blueprint to set your foundation for success. All members get access to the latest version of the course for life.
                   </p>
                   
                   {/* Progress indicator */}
@@ -359,12 +359,12 @@ function App() {
                       <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
                         <MessageCircle className="w-6 h-6 text-[#63D7E4]" />
                       </div>
-      </div>
+                    </div>
                     <h3 className="text-xl font-bold text-white text-center mb-3 font-montserrat">Community</h3>
                     <p className="text-gray-300 text-center text-sm leading-relaxed font-poppins">
                       Build your business in a supportive environment. Collaborate with other members that are on the same path.
-        </p>
-      </div>
+                    </p>
+                  </div>
                 </motion.div>
               </div>
             </div>
@@ -446,7 +446,7 @@ function App() {
                     </div>
                     <div className="flex items-center text-gray-300 text-sm font-poppins">
                       <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-3 flex-shrink-0"></div>
-                      <span>Finding Clients & Developing Projects</span>
+                      <span>Finding Clients & Delivering Projects</span>
                     </div>
                     <div className="flex items-center text-gray-300 text-sm font-poppins">
                       <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-3 flex-shrink-0"></div>
@@ -625,18 +625,18 @@ function App() {
                     <div className="absolute inset-0 w-3 h-3 bg-[#63D7E4] rounded-full animate-ping"></div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[#63D7E4] font-montserrat">Launch Preparation</p>
-                    <p className="text-xs text-gray-400 font-poppins">Fall 2025 Cohort Formation</p>
+                    <p className="text-sm font-semibold text-[#63D7E4] font-montserrat">Weekly Sessions</p>
+                    <p className="text-xs text-gray-400 font-poppins">Group Coaching & Workshops</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-6 text-xs text-gray-400">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                    <span>Early Access Available</span>
+                    <span>Expert Guidance</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-[#00BDC9] rounded-full"></div>
-                    <span>Limited Founding Members</span>
+                    <span>Collaborative Learning</span>
                   </div>
                 </div>
               </div>
@@ -668,7 +668,7 @@ function App() {
                 {/* Enhanced engagement indicators */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Launch Features</span>
+                    <span>Session Format</span>
                     <div className="flex space-x-1">
                       <div className="w-1 h-1 bg-[#00BDC9] rounded-full animate-pulse"></div>
                       <div className="w-1 h-1 bg-[#63D7E4] rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
@@ -678,15 +678,15 @@ function App() {
                   <div className="text-xs text-gray-500 space-y-1">
                     <div className="flex items-center">
                       <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Weekly Group Sessions Planned</span>
+                      <span>Interactive Q&A Sessions</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Q&A Format with Vuk Stajic</span>
+                      <span>Open Discussion Format</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Lifetime Access Included</span>
+                      <span>Lifetime Access</span>
                     </div>
                   </div>
                 </div>
@@ -716,24 +716,24 @@ function App() {
                 {/* Enhanced workshop indicators */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Planned Curriculum</span>
+                    <span>Workshop Topics</span>
                     <div className="flex items-center space-x-1">
                       <div className="w-2 h-2 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full"></div>
-                      <span>Ready to Launch</span>
+                      <span>Specialized Learning</span>
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <span>• Advanced Salesforce Architecture</span>
-                      <span className="text-[#63D7E4]">Planned</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
+                      <span>Advanced Salesforce Architecture</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Business Development Mastery</span>
-                      <span className="text-[#00BDC9]">Planned</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
+                      <span>Business Development Strategies</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Leadership & Team Building</span>
-                      <span className="text-[#63D7E4]">Planned</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
+                      <span>Leadership & Growth</span>
                     </div>
                   </div>
                 </div>
@@ -762,7 +762,7 @@ function App() {
                 </p>
                 <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
                   <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                  <span>Founding Members</span>
+                  <span>Interactive Sessions</span>
                 </div>
               </div>
             </motion.div>
@@ -786,7 +786,7 @@ function App() {
                 </p>
                 <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
                   <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                  <span>Curriculum Ready</span>
+                  <span>Specialized Topics</span>
                 </div>
               </div>
             </motion.div>
@@ -829,48 +829,7 @@ function App() {
             </p>
           </motion.div>
 
-          {/* Enhanced Community Activity Dashboard */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="max-w-5xl mx-auto mb-12"
-          >
-            <div className="bg-[#252542]/30 backdrop-blur-md rounded-xl border border-[#00BDC9]/20 p-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Launch Preparation */}
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <div className="relative">
-                      <div className="w-3 h-3 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                      <div className="absolute inset-0 w-3 h-3 bg-[#63D7E4] rounded-full animate-ping"></div>
-                    </div>
-                    <span className="ml-2 text-sm font-semibold text-[#63D7E4] font-montserrat">Pre-Launch</span>
-                  </div>
-                  <p className="text-xs text-gray-400 font-poppins">Discord server setup complete</p>
-                </div>
-                
-                {/* Member Expertise */}
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2 space-x-2">
-                    <div className="w-2 h-2 bg-[#00BDC9] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#00BDC9] font-montserrat">Target Expertise</span>
-                  </div>
-                  <p className="text-xs text-gray-400 font-poppins">Sales Cloud • Service Cloud • Marketing Cloud</p>
-                </div>
-                
-                {/* Founding Members */}
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2 space-x-2">
-                    <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#63D7E4] font-montserrat">Founding Members</span>
-                  </div>
-                  <p className="text-xs text-gray-400 font-poppins">Limited early access spots</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+
           
           {/* Desktop Layout - 2 Cards Side by Side */}
           <div className="hidden md:grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
@@ -897,24 +856,24 @@ function App() {
                 {/* Enhanced network indicators */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Community Building</span>
+                    <span>Network Benefits</span>
                     <div className="flex items-center space-x-1">
                       <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                      <span>Infrastructure Ready</span>
+                      <span>Always Available</span>
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <span>• Discord Server Setup</span>
-                      <span className="text-[#63D7E4]">Complete</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
+                      <span>Peer-to-peer learning</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Founding Member Program</span>
-                      <span className="text-[#00BDC9]">Open</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
+                      <span>Expert collaboration</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Community Guidelines</span>
-                      <span className="text-[#63D7E4]">Established</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
+                      <span>Shared resources</span>
                     </div>
                   </div>
                   
@@ -934,7 +893,7 @@ function App() {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#63D7E4]/50 to-[#00BDC9]/50 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
                       </div>
                     </div>
-                    <span className="text-xs text-gray-400">Ready for Launch</span>
+                    <span className="text-xs text-gray-400">Connected Network</span>
                   </div>
                 </div>
               </div>
@@ -963,44 +922,35 @@ function App() {
                 {/* Enhanced collaboration indicators */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Launch Readiness</span>
+                    <span>Collaboration Tools</span>
                     <div className="flex items-center space-x-1">
                       <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                      <span>Systems Ready</span>
+                      <span>24/7 Access</span>
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center justify-between">
-                      <span>• Knowledge Base Framework</span>
-                      <span className="text-[#00BDC9]">Built</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
+                      <span>Discussion channels</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Collaboration Tools</span>
-                      <span className="text-[#63D7E4]">Configured</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
+                      <span>Resource sharing</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span>• Resource Library Structure</span>
-                      <span className="text-[#00BDC9]">Complete</span>
+                    <div className="flex items-center">
+                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
+                      <span>Knowledge exchange</span>
                     </div>
                   </div>
                   
-                  {/* Pre-launch anticipation feed */}
-                  <div className="bg-[#1a1a2e]/50 rounded-lg p-3 space-y-2">
-                    <div className="flex items-center space-x-2 text-xs">
+                  {/* Simple community activity indicator */}
+                  <div className="flex justify-center items-center space-x-2 pt-2">
+                    <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                      <span className="text-gray-400">Discord channels created</span>
-                      <span className="text-gray-500">Ready</span>
+                      <div className="w-2 h-2 bg-[#63D7E4]/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-2 h-2 bg-[#63D7E4]/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                     </div>
-                    <div className="flex items-center space-x-2 text-xs">
-                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
-                      <span className="text-gray-400">Welcome materials prepared</span>
-                      <span className="text-gray-500">Complete</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-xs">
-                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                      <span className="text-gray-400">Founding member onboarding</span>
-                      <span className="text-gray-500">Active</span>
-                    </div>
+                    <span className="text-xs text-gray-400">Active Community</span>
                   </div>
                 </div>
               </div>
@@ -1028,7 +978,7 @@ function App() {
                 </p>
                 <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
                   <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                  <span>Early Access Open</span>
+                  <span>Peer Support</span>
                 </div>
               </div>
             </motion.div>
@@ -1052,7 +1002,7 @@ function App() {
                 </p>
                 <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
                   <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                  <span>Launch Ready</span>
+                  <span>Always Available</span>
                 </div>
               </div>
             </motion.div>
