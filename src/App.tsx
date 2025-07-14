@@ -224,78 +224,76 @@ function App() {
             </motion.div>
           </div>
 
-          {/* Mobile Layout - Horizontal Scroll */}
-          <div className="md:hidden">
-            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
-              {/* Course Pillar Mobile */}
-              <div className="min-w-[280px] snap-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  className="relative group"
-                >
-                  <div className="relative rounded-2xl bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/10 p-6 h-full border border-[#00BDC9]/20">
-                    <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
-                        <GraduationCap className="w-6 h-6 text-[#63D7E4]" />
-                      </div>
+          {/* Mobile Layout - Vertical Stack */}
+          <div className="md:hidden space-y-6 max-w-lg mx-auto">
+            {/* Course Pillar Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
+            >
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden">
+                      <GraduationCap className="w-10 h-10 text-[#63D7E4] relative z-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-white text-center mb-3 font-montserrat">Course</h3>
-                    <p className="text-gray-300 text-center text-sm leading-relaxed font-poppins">
-                      Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money.
-                    </p>
                   </div>
-                </motion.div>
+                  <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Course</h3>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                    Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money. This is a real <span className="text-[#00BDC9] font-semibold">blueprint</span> to set your foundation for success. All members get access to the latest version of the course for life.
+                  </p>
+                </div>
               </div>
+            </motion.div>
 
-              {/* Coaching Pillar Mobile */}
-              <div className="min-w-[280px] snap-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  className="relative group"
-                >
-                  <div className="relative rounded-2xl bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/10 p-6 h-full border border-[#00BDC9]/20">
-                    <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
-                        <Users className="w-6 h-6 text-[#63D7E4]" />
-                      </div>
+            {/* Coaching Pillar Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
+            >
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
+                      <Users className="w-10 h-10 text-[#63D7E4] relative z-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-white text-center mb-3 font-montserrat">Coaching</h3>
-                    <p className="text-gray-300 text-center text-sm leading-relaxed font-poppins">
-                      Weekly group coaching sessions with Vuk Stajic to discuss course material, dive into strategy, and brainstorm solutions.
-                    </p>
                   </div>
-                </motion.div>
+                  <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Coaching</h3>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                    Weekly group coaching sessions with Vuk Stajic to discuss course material, dive into strategy, and brainstorm solutions to your most pressing problems. This is where you put the lessons to action. All members get access to coaching sessions for life.
+                  </p>
+                </div>
               </div>
+            </motion.div>
 
-              {/* Community Pillar Mobile */}
-              <div className="min-w-[280px] snap-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  className="relative group"
-                >
-                  <div className="relative rounded-2xl bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/10 p-6 h-full border border-[#00BDC9]/20">
-                    <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
-                        <MessageCircle className="w-6 h-6 text-[#63D7E4]" />
-                      </div>
+            {/* Community Pillar Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
+            >
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
+                      <MessageCircle className="w-10 h-10 text-[#63D7E4] relative z-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-white text-center mb-3 font-montserrat">Community</h3>
-                    <p className="text-gray-300 text-center text-sm leading-relaxed font-poppins">
-                      Build your business in a supportive environment. Collaborate with other members that are on the same path.
-                    </p>
                   </div>
-                </motion.div>
+                  <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                    Build your business in a supportive environment. Collaborate with other members that are on the same path. This is your opportunity to grow your business around other leaders. All members have access to the community for life.
+                  </p>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -444,21 +442,40 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
-                    <GraduationCap className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden">
+                      <GraduationCap className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                    </div>
+                  </div>
+                  <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Lessons & Stories</h4>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center mb-4 font-poppins">
+                    The course focuses on the 4 phases of launching and running your business:
+                  </p>
+                  
+                  {/* Enhanced phase list with icons */}
+                  <div className="space-y-3">
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Finding Your Niche & Your Confidence</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Building Your Business</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Finding Clients & Delivering Projects</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Establishing Long Term Success</span>
+                    </div>
                   </div>
                 </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Lessons & Stories</h4>
-                <p className="text-sm text-gray-300 text-center mb-3 font-poppins">4 phases of business:</p>
-                <ul className="text-gray-300 text-sm space-y-1 font-poppins">
-                  <li>- Finding Your Niche & Confidence</li>
-                  <li>- Building Your Business</li>
-                  <li>- Finding Clients & Projects</li>
-                  <li>- Long Term Success</li>
-                </ul>
               </div>
             </motion.div>
 
@@ -468,20 +485,40 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
-                    <MessageCircle className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
+                      <MessageCircle className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                    </div>
+                  </div>
+                  <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Resources & Templates</h4>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center mb-4 font-poppins">
+                    You are provided with many resources and templates that save you time and money, including:
+                  </p>
+                  
+                  {/* Enhanced resource list with icons */}
+                  <div className="space-y-3">
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Master Service Agreement</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Statements of Work</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Pitch Decks</span>
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm font-poppins">
+                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-3 flex-shrink-0"></div>
+                      <span>Runway Budget</span>
+                    </div>
                   </div>
                 </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Resources & Templates</h4>
-                <ul className="text-gray-300 text-sm space-y-1 font-poppins">
-                  <li>- Master Service Agreement</li>
-                  <li>- Statements of Work</li>
-                  <li>- Pitch Decks</li>
-                  <li>- Runway Budget</li>
-                </ul>
               </div>
             </motion.div>
           </div>
@@ -580,20 +617,19 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
-                    <Users className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
+                      <Users className="w-10 h-10 text-[#63D7E4]" />
+                    </div>
                   </div>
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Weekly Sync</h4>
-                <p className="text-sm text-gray-300 text-center font-poppins mb-3">
-                  Ask questions about your current challenges. Questions from members will be discussed in an open and collaborative manner.
-                </p>
-                <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
-                  <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                  <span>Interactive Sessions</span>
+                                      <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Weekly Sync</h4>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                    This is your time to ask questions about your current challenges. On a first-come-first-serve basis, questions from members will be discussed in an open and collaborative manner. Even when you don't have a question, you will benefit from seeing others overcome their obstacles.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -604,20 +640,19 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
-                    <GraduationCap className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
+                      <GraduationCap className="w-10 h-10 text-[#63D7E4]" />
+                    </div>
                   </div>
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
-                <p className="text-sm text-gray-300 text-center font-poppins mb-3">
-                  Specific topics and hands on learning for members that have completed the course and established their <span className="text-[#00BDC9] font-semibold">blueprint</span>.
-                </p>
-                <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
-                  <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                  <span>Specialized Topics</span>
+                                      <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
+                                      <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                      Specific topics and hands on learning, all in a collaborative environment. These sessions are for members that have completed the course and have their <span className="text-[#00BDC9] font-semibold">blueprint</span> established. These workshops ensure continuing learning and strategic development.
+                    </p>
                 </div>
               </div>
             </motion.div>
@@ -719,20 +754,19 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
-                    <Users className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
+                      <Users className="w-10 h-10 text-[#63D7E4]" />
+                    </div>
                   </div>
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Supportive Network</h4>
-                <p className="text-sm text-gray-300 text-center font-poppins mb-3">
-                  No challenge you face will be yours alone. You have a network of people ready to assist you through co-learning.
-                </p>
-                <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
-                  <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                  <span>Peer Support</span>
+                                      <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Supportive Network</h4>
+                  <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                    No challenge you face will be yours alone. You have a network of people ready to assist you. And likewise, you have the opportunity to help others with their journey. Through co-learning, we all grow together.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -743,20 +777,19 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-50px" }}
+              className="relative px-1 group"
             >
-              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
-                <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
-                    <MessageCircle className="w-6 h-6 text-[#63D7E4]" />
+              <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
+                <div className="pt-6 relative z-10">
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
+                      <MessageCircle className="w-10 h-10 text-[#63D7E4]" />
+                    </div>
                   </div>
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Collaborative Environment</h4>
-                <p className="text-sm text-gray-300 text-center font-poppins mb-3">
-                  We are all professionals with our own niche expertise. As a community, we can do more together.
-                </p>
-                <div className="flex justify-center items-center space-x-2 text-xs text-gray-400">
-                  <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                  <span>Always Available</span>
+                                      <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Collaborative Environment</h4>
+                                      <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
+                      We are all professionals with our own niche expertise. As we uncover opportunities to help clients, we can rely on each other to bring value to our clients. As a community, we can do more.
+                    </p>
                 </div>
               </div>
             </motion.div>
