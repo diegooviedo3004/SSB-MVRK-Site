@@ -1,7 +1,24 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, MessageCircle } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
+// import { CoachingIcon, CommunityIcon } from './components/CustomIcons';
 import './App.css';
+
+// Custom Icon Component for SVG files in public/icons/
+const CustomIcon = ({ name, className }: { name: string; className?: string }) => (
+  <img 
+    src={`/icons/${name}.svg`} 
+    alt={name}
+    className={className}
+  />
+);
+
+// Example of how to use your custom icons:
+// Replace Brain with CoachingIcon:
+// <CoachingIcon className="w-10 h-10 text-[#63D7E4] relative z-10" />
+// 
+// Replace Network with CommunityIcon:
+// <CommunityIcon className="w-10 h-10 text-[#63D7E4] relative z-10" />
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -148,7 +165,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#00BDC9]/10 to-[#63D7E4]/10 animate-pulse"></div>
-                      <GraduationCap className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Hat" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Course</h3>
@@ -179,7 +196,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                      <Users className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Whistle" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Coaching</h3>
@@ -210,7 +227,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                      <MessageCircle className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Community" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
@@ -238,7 +255,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden">
-                      <GraduationCap className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Hat" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Course</h3>
@@ -259,11 +276,11 @@ function App() {
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl p-6 h-full border border-white/5 shadow-lg">
                 <div className="pt-6 relative z-10">
-                  <div className="mb-4 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
-                      <Users className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                                      <div className="mb-4 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
+                        <CustomIcon name="Whistle" className="w-10 h-10 brightness-0 invert relative z-10" />
+                      </div>
                     </div>
-                  </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Coaching</h3>
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
                     Weekly group coaching sessions with Vuk Stajic to discuss course material, dive into strategy, and brainstorm solutions to your most pressing problems. This is where you put the lessons to action. All members get access to coaching sessions for life.
@@ -284,7 +301,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
-                      <MessageCircle className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Community" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
@@ -352,7 +369,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#00BDC9]/10 to-[#63D7E4]/10 animate-pulse"></div>
-                      <GraduationCap className="w-8 h-8 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Bulb" className="w-8 h-8 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Lessons & Stories</h4>
@@ -401,7 +418,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                      <MessageCircle className="w-8 h-8 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Treasure" className="w-8 h-8 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Resources & Templates</h4>
@@ -448,7 +465,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden">
-                      <GraduationCap className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Bulb" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Lessons & Stories</h4>
@@ -491,7 +508,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
-                      <MessageCircle className="w-10 h-10 text-[#63D7E4] relative z-10" />
+                      <CustomIcon name="Treasure" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Resources & Templates</h4>
@@ -572,10 +589,10 @@ function App() {
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6 h-full hover:border-[#00BDC9]/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#00BDC9]/50 hover:shadow-2xl hover:shadow-[#00BDC9]/10 hover:scale-[1.02]">
                 <div className="mb-4 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#00BDC9]/10 to-[#63D7E4]/10 animate-pulse"></div>
-                    <Users className="w-8 h-8 text-[#63D7E4] relative z-10" />
-                  </div>
+                                      <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#00BDC9]/10 to-[#63D7E4]/10 animate-pulse"></div>
+                      <CustomIcon name="Meeting" className="w-8 h-8 brightness-0 invert relative z-10" />
+                    </div>
                 </div>
                 <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Weekly Sync</h4>
                 <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins mb-4">
@@ -597,7 +614,7 @@ function App() {
                 <div className="mb-4 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                    <GraduationCap className="w-8 h-8 text-[#63D7E4] relative z-10" />
+                    <CustomIcon name="Workshop" className="w-8 h-8 brightness-0 invert relative z-10" />
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
@@ -623,7 +640,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
-                      <Users className="w-10 h-10 text-[#63D7E4]" />
+                      <CustomIcon name="Meeting" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                                       <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Weekly Sync</h4>
@@ -646,7 +663,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
-                      <GraduationCap className="w-10 h-10 text-[#63D7E4]" />
+                      <CustomIcon name="Workshop" className="w-10 h-10 brightness-0 invert" />
                     </div>
                   </div>
                                       <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Workshops</h4>
@@ -711,7 +728,7 @@ function App() {
                 <div className="mb-4 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#00BDC9]/10 to-[#63D7E4]/10 animate-pulse"></div>
-                    <Users className="w-8 h-8 text-[#63D7E4] relative z-10" />
+                    <CustomIcon name="SupportNetwork" className="w-8 h-8 brightness-0 invert relative z-10" />
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Supportive Network</h4>
@@ -734,7 +751,7 @@ function App() {
                 <div className="mb-4 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                    <MessageCircle className="w-8 h-8 text-[#63D7E4] relative z-10" />
+                    <CustomIcon name="Collaborative" className="w-8 h-8 brightness-0 invert relative z-10" />
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Collaborative Environment</h4>
@@ -760,7 +777,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
-                      <Users className="w-10 h-10 text-[#63D7E4]" />
+                      <CustomIcon name="SupportNetwork" className="w-10 h-10 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                                       <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Supportive Network</h4>
@@ -783,7 +800,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30">
-                      <MessageCircle className="w-10 h-10 text-[#63D7E4]" />
+                      <CustomIcon name="Collaborative" className="w-10 h-10 brightness-0 invert" />
                     </div>
                   </div>
                                       <h4 className="text-xl font-semibold mb-4 text-[#63D7E4] text-center font-montserrat">Collaborative Environment</h4>
