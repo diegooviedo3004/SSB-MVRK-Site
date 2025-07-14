@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
 // import { CoachingIcon, CommunityIcon } from './components/CustomIcons';
 import './App.css';
 
