@@ -62,8 +62,8 @@ function App() {
               variants={item}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight font-montserrat"
             >
-              The <span className="inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,#00A1E0_0%,#7FECFF_25%,#63D7E4_50%,#00A1E0_75%,#00A1E0_100%)] bg-[length:400%_100%] animate-shimmer font-extrabold">Salesforce</span>{" "}
-              <span className="inline-block text-transparent bg-clip-text bg-[linear-gradient(90deg,#617f95_0%,#A5C1D9_25%,#8EABC4_50%,#617f95_75%,#617f95_100%)] bg-[length:400%_100%] animate-shimmer font-extrabold">Solopreneur</span>
+              The <span className="inline-block text-white font-extrabold">Salesforce</span>{" "}
+              <span className="inline-block text-white font-extrabold">Solopreneur</span>
               <br />
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] font-extrabold">Blueprint</span>
             </motion.h1>
@@ -153,30 +153,10 @@ function App() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Course</h3>
                   
-                  {/* Professional stats/highlights */}
-                  <div className="flex justify-center mb-4">
-                    <div className="flex items-center space-x-4 text-xs text-gray-400">
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-1"></div>
-                        <span>Lifetime Access</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-1"></div>
-                        <span>4 Phases</span>
-                      </div>
-                    </div>
-                  </div>
-                  
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
                     Lessons to help you get your business ready, find your first clients, and deliver real value. Resources and templates to save you time and money. This is a real <span className="text-[#00BDC9] font-semibold">blueprint</span> to set your foundation for success. All members get access to the latest version of the course for life.
                   </p>
                   
-                  {/* Progress indicator */}
-                  <div className="mt-4 flex justify-center">
-                    <div className="w-full bg-gray-700/30 rounded-full h-1">
-                      <div className="bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] h-1 rounded-full w-full"></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -204,33 +184,10 @@ function App() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Coaching</h3>
                   
-                  {/* Professional stats/highlights */}
-                  <div className="flex justify-center mb-4">
-                    <div className="flex items-center space-x-4 text-xs text-gray-400">
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-1"></div>
-                        <span>Weekly Sessions</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-1"></div>
-                        <span>Live Feedback</span>
-                      </div>
-                    </div>
-                  </div>
-                  
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
                     Weekly group coaching sessions with Vuk Stajic to discuss course material, dive into strategy, and brainstorm solutions to your most pressing problems. This is where you put the lessons to action. All members get access to coaching sessions for life.
                   </p>
                   
-                  {/* Activity indicator */}
-                  <div className="mt-4 flex justify-center items-center space-x-2">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                      <div className="w-2 h-2 bg-[#63D7E4]/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      <div className="w-2 h-2 bg-[#63D7E4]/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                    </div>
-                    <span className="text-xs text-gray-400">Active Community</span>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -258,33 +215,10 @@ function App() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
                   
-                  {/* Professional stats/highlights */}
-                  <div className="flex justify-center mb-4">
-                    <div className="flex items-center space-x-4 text-xs text-gray-400">
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#00BDC9] rounded-full mr-1"></div>
-                        <span>Discord Server</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#63D7E4] rounded-full mr-1"></div>
-                        <span>24/7 Support</span>
-                      </div>
-                    </div>
-                  </div>
-                  
                   <p className="text-base text-gray-300 leading-relaxed tracking-wide text-center font-poppins">
                     Build your business in a supportive environment. Collaborate with other members that are on the same path. This is your opportunity to grow your business around other leaders. All members have access to the community for life.
                   </p>
                   
-                  {/* Network indicator */}
-                  <div className="mt-4 flex justify-center items-center space-x-2">
-                    <div className="flex -space-x-2">
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full border border-gray-700"></div>
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#63D7E4] to-[#00BDC9] rounded-full border border-gray-700"></div>
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full border border-gray-700"></div>
-                    </div>
-                    <span className="text-xs text-gray-400">Connected Network</span>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -448,15 +382,6 @@ function App() {
                     </div>
                   </div>
                   
-                  {/* Progress indicator */}
-                  <div className="mt-4 flex justify-center">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-1 bg-[#00BDC9] rounded-full"></div>
-                      <div className="w-6 h-1 bg-[#63D7E4] rounded-full"></div>
-                      <div className="w-6 h-1 bg-[#00BDC9] rounded-full"></div>
-                      <div className="w-6 h-1 bg-[#63D7E4] rounded-full"></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -506,11 +431,6 @@ function App() {
                     </div>
                   </div>
                   
-                  {/* Resource availability indicator */}
-                  <div className="mt-4 flex justify-center items-center space-x-2">
-                    <div className="w-2 h-2 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                    <span className="text-xs text-gray-400">Ready to Download</span>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -527,7 +447,7 @@ function App() {
             >
               <div className="bg-[#252542]/40 backdrop-blur-md rounded-xl border border-white/5 shadow-lg p-6">
                 <div className="mb-4 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30">
+                  <div className="w-12 h-12 rounded-full bg-[#00BDC9]/20 flex items-center justify-center">
                     <GraduationCap className="w-6 h-6 text-[#63D7E4]" />
                   </div>
                 </div>
@@ -603,40 +523,6 @@ function App() {
             </p>
           </motion.div>
 
-          {/* Enhanced Live Session Status */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="max-w-4xl mx-auto mb-12"
-          >
-            <div className="bg-[#252542]/30 backdrop-blur-md rounded-xl border border-[#00BDC9]/20 p-4">
-              <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                <div className="flex items-center space-x-4">
-                  <div className="relative">
-                    <div className="w-3 h-3 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                    <div className="absolute inset-0 w-3 h-3 bg-[#63D7E4] rounded-full animate-ping"></div>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#63D7E4] font-montserrat">Weekly Sessions</p>
-                    <p className="text-xs text-gray-400 font-poppins">Group Coaching & Workshops</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-6 text-xs text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                    <span>Expert Guidance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-[#00BDC9] rounded-full"></div>
-                    <span>Collaborative Learning</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-          
           {/* Desktop Layout - 2 Cards Side by Side */}
           <div className="hidden md:grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
             {/* Weekly Sync */}
@@ -659,31 +545,6 @@ function App() {
                   This is your time to ask questions about your current challenges. On a first-come-first-serve basis, questions from members will be discussed in an open and collaborative manner. Even when you don't have a question, you will benefit from seeing others overcome their obstacles.
                 </p>
                 
-                {/* Enhanced engagement indicators */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Session Format</span>
-                    <div className="flex space-x-1">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Interactive Q&A Sessions</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Open Discussion Format</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Lifetime Access</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -707,30 +568,6 @@ function App() {
                   Specific topics and hands on learning, all in a collaborative environment. These sessions are for members that have completed the course and have their <span className="text-[#00BDC9] font-semibold">blueprint</span> established. These workshops ensure continuing learning and strategic development.
                 </p>
                 
-                {/* Enhanced workshop indicators */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Workshop Topics</span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full"></div>
-                      <span>Specialized Learning</span>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Advanced Salesforce Architecture</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Business Development Strategies</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Leadership & Growth</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -847,49 +684,6 @@ function App() {
                   No challenge you face will be yours alone. You have a network of people ready to assist you. And likewise, you have the opportunity to help others with their journey. Through co-learning, we all grow together.
                 </p>
                 
-                {/* Enhanced network indicators */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Network Benefits</span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-[#00BDC9] rounded-full animate-pulse"></div>
-                      <span>Always Available</span>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Peer-to-peer learning</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Expert collaboration</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Shared resources</span>
-                    </div>
-                  </div>
-                  
-                  {/* Enhanced member connection visualization */}
-                  <div className="flex justify-center items-center space-x-2 pt-2">
-                    <div className="flex -space-x-2">
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full border border-gray-700 relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#00BDC9]/50 to-[#63D7E4]/50 rounded-full animate-pulse"></div>
-                      </div>
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#63D7E4] to-[#00BDC9] rounded-full border border-gray-700 relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#63D7E4]/50 to-[#00BDC9]/50 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      </div>
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] rounded-full border border-gray-700 relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#00BDC9]/50 to-[#63D7E4]/50 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                      </div>
-                      <div className="w-4 h-4 bg-gradient-to-r from-[#63D7E4] to-[#00BDC9] rounded-full border border-gray-700 relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#63D7E4]/50 to-[#00BDC9]/50 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                      </div>
-                    </div>
-                    <span className="text-xs text-gray-400">Connected Network</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -913,40 +707,6 @@ function App() {
                   We are all professionals with our own niche expertise. As we uncover opportunities to help clients, we can rely on each other to bring value to our clients. As a community, we can do more.
                 </p>
                 
-                {/* Enhanced collaboration indicators */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>Collaboration Tools</span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full"></div>
-                      <span>24/7 Access</span>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-500 space-y-1">
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Discussion channels</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#63D7E4] rounded-full mr-2"></div>
-                      <span>Resource sharing</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-1 h-1 bg-[#00BDC9] rounded-full mr-2"></div>
-                      <span>Knowledge exchange</span>
-                    </div>
-                  </div>
-                  
-                  {/* Simple community activity indicator */}
-                  <div className="flex justify-center items-center space-x-2 pt-2">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-[#63D7E4] rounded-full animate-pulse"></div>
-                      <div className="w-2 h-2 bg-[#63D7E4]/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      <div className="w-2 h-2 bg-[#63D7E4]/40 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                    </div>
-                    <span className="text-xs text-gray-400">Active Community</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
