@@ -1,8 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile-optimized font loading with font-display: swap */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qO0isEw.woff2') format('woff2');
+}
 
 @layer base {
 :root {
@@ -52,19 +75,32 @@
 }
 
 @layer base {
+/* Enhanced font loading for mobile with progressive enhancement */
 body {
-    font-family: theme('fontFamily.poppins');
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #1a1a2e;
-  min-height: 100vh;
+    min-height: 100vh;
     color: white;
 }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: theme('fontFamily.montserrat');
+/* Progressive font enhancement - load Poppins when available */
+.fonts-loaded body,
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: white;
     font-weight: 700;
     letter-spacing: theme('letterSpacing.wider');
-  }
+}
+
+/* Progressive font enhancement - load Montserrat when available */
+.fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
 }
 
 @layer utilities {

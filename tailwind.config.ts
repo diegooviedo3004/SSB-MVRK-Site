@@ -19,12 +19,12 @@ export default {
   	},
   	extend: {
   		fontFamily: {
-  			poppins: ['Poppins', 'sans-serif'],
-  			montserrat: ['Montserrat', 'sans-serif'],
-  			playfair: ['Playfair Display', 'serif'],
-  			sans: ['Poppins', 'Montserrat', 'sans-serif'],
-  			heading: ['Montserrat', 'sans-serif'],
-  			serif: ['Playfair Display', 'serif']
+  			poppins: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
+  			montserrat: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
+  			playfair: ['Playfair Display', 'Georgia', 'serif'],
+  			sans: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  			heading: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  			serif: ['Playfair Display', 'Georgia', 'serif']
   		},
   		colors: {
   			border: 'hsl(var(--border))',

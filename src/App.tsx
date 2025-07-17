@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { IoVolumeHigh, IoVolumeMute } from 'react-icons/io5';
+import { Linkedin } from 'lucide-react';
 // import { CoachingIcon, CommunityIcon } from './components/CustomIcons';
 import './App.css';
 
@@ -21,6 +23,8 @@ const CustomIcon = ({ name, className }: { name: string; className?: string }) =
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isVideoMuted, setIsVideoMuted] = useState(true);
+  const [isVideoMutedMobile, setIsVideoMutedMobile] = useState(true);
 
   useEffect(() => {
     // Set loaded state after a small delay for animations
@@ -88,7 +92,7 @@ function App() {
             <motion.div variants={item} className="mb-16">
               <a href="#ready" className="inline-block">
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 font-poppins hover:text-[#63D7E4] transition-colors duration-300 cursor-pointer">
-                  Next Cohort Starting In Fall of 2025
+                  Next Cohort Starting Fall 2025
                 </p>
               </a>
               <div className="w-32 h-1 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] mx-auto"></div>
@@ -226,7 +230,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                      <CustomIcon name="Community" className="w-12 h-12 brightness-0 invert relative z-10" />
+                      <CustomIcon name="Community" className="w-14 h-14 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
@@ -300,7 +304,7 @@ function App() {
                 <div className="pt-6 relative z-10">
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden">
-                      <CustomIcon name="Community" className="w-14 h-14 brightness-0 invert relative z-10" />
+                      <CustomIcon name="Community" className="w-16 h-16 brightness-0 invert relative z-10" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
@@ -813,6 +817,215 @@ function App() {
         </div>
       </section>
 
+      {/* Coach Section */}
+      <section 
+        id="coach" 
+        className="relative py-24 overflow-hidden section-wrapper z-10"
+      >
+        {/* Background elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e]/80 via-[#1a1a2e] to-[#1a1a2e]/90" />
+        </div>
+        
+        <div className="container mx-auto px-6 z-10 relative">
+          {/* Desktop Layout - Video Left, Text Right */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8 w-full max-w-6xl mx-auto items-center">
+            {/* Video Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="relative flex justify-center"
+            >
+              <div className="relative flex flex-col items-center space-y-4">
+                {/* Circular Video Container */}
+                <div className="relative w-80 h-80 rounded-full overflow-hidden bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 p-1">
+                  <div className="w-full h-full rounded-full overflow-hidden relative bg-[#1a1a2e]">
+                    <video
+                      className="w-full h-full object-cover scale-110"
+                      style={{ objectPosition: '55% center' }}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      id="coach-video"
+                    >
+                      <source src="/Landing Page Intro Video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  
+                  {/* Decorative ring */}
+                  <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-[#00BDC9]/30 to-[#63D7E4]/30 blur-lg -z-10"></div>
+                </div>
+                
+                {/* Unmute Button Below Video */}
+                <button
+                  onClick={() => {
+                    const video = document.getElementById('coach-video') as HTMLVideoElement;
+                    if (video) {
+                      video.muted = !video.muted;
+                      setIsVideoMuted(video.muted);
+                    }
+                  }}
+                  id="unmute-btn"
+                  className="w-12 h-12 bg-gradient-to-r from-[#00BDC9]/20 to-[#63D7E4]/30 hover:from-[#00BDC9]/30 hover:to-[#63D7E4]/40 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-[#63D7E4]/30"
+                >
+                  {isVideoMuted ? <IoVolumeMute className="w-5 h-5" /> : <IoVolumeHigh className="w-5 h-5" />}
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Text Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="space-y-6"
+            >
+              <h3 className="text-3xl font-bold text-[#63D7E4] font-montserrat">
+                Vuk Stajic – Your Coach
+              </h3>
+              
+              <div className="space-y-4 text-gray-300 font-poppins">
+                <p className="text-base leading-relaxed">
+                  I have been in the Salesforce Ecosystem since 2014. In 2020, I founded 
+                  MVRK - a solo Salesforce practice. Today, it serves over a dozen active 
+                  clients and supports 5 employees. It has also allowed me to live a more 
+                  fulfilled and happy life.
+                </p>
+                
+                <p className="text-base leading-relaxed">
+                  I am also a Judo black belt and coach. Guiding others to unlock their 
+                  full potential is my passion! That winning attitude fuels this blueprint 
+                  program, which encapsulates my wealth of experience and is designed 
+                  to give you a significant boost in your path to success as a 
+                  <span className="text-[#00BDC9] font-semibold"> Solopreneur</span>.
+                </p>
+                
+                <p className="text-base leading-relaxed">
+                  As a member of this program, I will give you real guidance and 
+                  unwavering support – pushing you to succeed and win, with a clear 
+                  <span className="text-[#63D7E4] font-semibold"> blueprint</span> that will build your business foundation.
+                </p>
+              </div>
+              
+              {/* LinkedIn Link */}
+              <div className="pt-4">
+                <a 
+                  href="https://www.linkedin.com/in/vuks/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#00BDC9]/20 flex items-center justify-center text-gray-300 hover:text-[#63D7E4] transition-all duration-300"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Mobile Layout - Video Top, Text Bottom */}
+          <div className="lg:hidden space-y-8 max-w-lg mx-auto">
+            {/* Video Section Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="flex justify-center"
+            >
+              <div className="relative flex flex-col items-center space-y-4">
+                {/* Circular Video Container - Smaller for mobile */}
+                <div className="relative w-64 h-64 rounded-full overflow-hidden bg-gradient-to-br from-[#00BDC9]/20 to-[#63D7E4]/30 p-1">
+                  <div className="w-full h-full rounded-full overflow-hidden relative bg-[#1a1a2e]">
+                    <video
+                      className="w-full h-full object-cover scale-110"
+                      style={{ objectPosition: '55% center' }}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      id="coach-video-mobile"
+                    >
+                      <source src="/Landing Page Intro Video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  
+                  {/* Decorative ring */}
+                  <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-[#00BDC9]/30 to-[#63D7E4]/30 blur-lg -z-10"></div>
+                </div>
+                
+                {/* Unmute Button Below Video Mobile */}
+                <button
+                  onClick={() => {
+                    const video = document.getElementById('coach-video-mobile') as HTMLVideoElement;
+                    if (video) {
+                      video.muted = !video.muted;
+                      setIsVideoMutedMobile(video.muted);
+                    }
+                  }}
+                  id="unmute-btn-mobile"
+                  className="w-10 h-10 bg-gradient-to-r from-[#00BDC9]/20 to-[#63D7E4]/30 hover:from-[#00BDC9]/30 hover:to-[#63D7E4]/40 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 border border-[#63D7E4]/30"
+                >
+                  {isVideoMutedMobile ? <IoVolumeMute className="w-4 h-4" /> : <IoVolumeHigh className="w-4 h-4" />}
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Text Section Mobile */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="text-center space-y-6"
+            >
+              <h3 className="text-2xl font-bold text-[#63D7E4] font-montserrat">
+                Vuk Stajic – Your Coach
+              </h3>
+              
+              <div className="space-y-4 text-gray-300 font-poppins text-sm">
+                <p className="leading-relaxed">
+                  I have been in the Salesforce Ecosystem since 2014. In 2020, I founded 
+                  MVRK - a solo Salesforce practice. Today, it serves over a dozen active 
+                  clients and supports 5 employees. It has also allowed me to live a more 
+                  fulfilled and happy life.
+                </p>
+                
+                <p className="leading-relaxed">
+                  I am also a Judo black belt and coach. Guiding others to unlock their 
+                  full potential is my passion! That winning attitude fuels this blueprint 
+                  program, which encapsulates my wealth of experience and is designed 
+                  to give you a significant boost in your path to success as a 
+                  <span className="text-[#00BDC9] font-semibold"> Solopreneur</span>.
+                </p>
+                
+                <p className="leading-relaxed">
+                  As a member of this program, I will give you real guidance and 
+                  unwavering support – pushing you to succeed and win, with a clear 
+                  <span className="text-[#63D7E4] font-semibold"> blueprint</span> that will build your business foundation.
+                </p>
+              </div>
+              
+              {/* LinkedIn Link Mobile */}
+              <div className="pt-4 flex justify-center">
+                <a 
+                  href="https://www.linkedin.com/in/vuks/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#00BDC9]/20 flex items-center justify-center text-gray-300 hover:text-[#63D7E4] transition-all duration-300"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Are You Ready Section */}
       <section 
         id="ready" 
@@ -853,7 +1066,7 @@ function App() {
               When you are in, you are in for life.
             </p>
             <p className="text-base text-gray-300 leading-relaxed tracking-wide font-poppins">
-              To see if you are ready to join the next cohort, we have developed a self-assessment which will give you an understand of the criteria we use to gauge readiness.
+              To see if you are ready to join the next cohort, we have developed a self-assessment which will give you an understanding of the criteria we use to gauge readiness.
             </p>
           </motion.div>
           

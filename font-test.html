@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Font Loading Test</title>
+    
+    <!-- Enhanced font loading for mobile testing -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical font preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback -->
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <style>
+        /* Font-face declarations with font-display: swap */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300 700;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300 800;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2') format('woff2');
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .fonts-loaded body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+        }
+        
+        .fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3 {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(37, 37, 66, 0.4);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .success { background-color: #4CAF50; }
+        .warning { background-color: #FF9800; }
+        .error { background-color: #f44336; }
+        
+        .font-sample {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 189, 201, 0.1);
+            border: 1px solid rgba(0, 189, 201, 0.3);
+            border-radius: 5px;
+        }
+        
+        .poppins-test { font-family: 'Poppins', sans-serif; }
+        .montserrat-test { font-family: 'Montserrat', sans-serif; }
+        
+        .device-info {
+            font-size: 14px;
+            background: rgba(99, 215, 228, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .loading-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(99, 215, 228, 0.3);
+            border-radius: 50%;
+            border-top-color: #63D7E4;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .test-results {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(30, 30, 46, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+    
+    <script>
+        let fontLoadStartTime = Date.now();
+        let testResults = {
+            poppinsLoaded: false,
+            montserratLoaded: false,
+            loadTime: 0,
+            connection: '',
+            userAgent: navigator.userAgent
+        };
+        
+        // Get connection info if available
+        if ('connection' in navigator) {
+            testResults.connection = navigator.connection.effectiveType || 'unknown';
+        }
+        
+        // Font loading detection
+        if ('fonts' in document) {
+            document.fonts.ready.then(function () {
+                document.documentElement.className += ' fonts-loaded';
+                testResults.loadTime = Date.now() - fontLoadStartTime;
+                updateStatus('Fonts loaded successfully!', 'success');
+                
+                // Check if specific fonts are loaded
+                if (document.fonts.check('16px Poppins')) {
+                    testResults.poppinsLoaded = true;
+                }
+                if (document.fonts.check('16px Montserrat')) {
+                    testResults.montserratLoaded = true;
+                }
+                
+                displayResults();
+            });
+            
+            // Timeout fallback
+            setTimeout(function() {
+                if (!document.documentElement.className.includes('fonts-loaded')) {
+                    updateStatus('Font loading timeout - using fallback fonts', 'warning');
+                    displayResults();
+                }
+            }, 5000);
+        }
+        
+        function updateStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = 'status ' + type;
+        }
+        
+        function displayResults() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <h3>Test Results</h3>
+                <p><strong>Poppins Loaded:</strong> ${testResults.poppinsLoaded ? '✅ Yes' : '❌ No'}</p>
+                <p><strong>Montserrat Loaded:</strong> ${testResults.montserratLoaded ? '✅ Yes' : '❌ No'}</p>
+                <p><strong>Load Time:</strong> ${testResults.loadTime}ms</p>
+                <p><strong>Connection:</strong> ${testResults.connection}</p>
+                <p><strong>User Agent:</strong> ${testResults.userAgent}</p>
+                <p><strong>Viewport:</strong> ${window.innerWidth}x${window.innerHeight}</p>
+                <p><strong>Screen:</strong> ${screen.width}x${screen.height}</p>
+            `;
+        }
+        
+        window.addEventListener('load', function() {
+            updateStatus('Testing font loading...', 'warning');
+        });
+    </script>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Mobile Font Loading Test</h1>
+        <div id="status" class="status warning">
+            <span class="loading-indicator"></span> Loading fonts...
+        </div>
+        
+        <div class="device-info">
+            <h3>Device Information</h3>
+            <p><strong>Screen Size:</strong> <span id="screen-size"></span></p>
+            <p><strong>Viewport:</strong> <span id="viewport-size"></span></p>
+            <p><strong>User Agent:</strong> <span id="user-agent"></span></p>
+            <p><strong>Connection:</strong> <span id="connection-type"></span></p>
+        </div>
+        
+        <div class="font-sample poppins-test">
+            <h3>Poppins Font Test</h3>
+            <p>This text should be displayed in Poppins font. If you see a system font instead, there's a loading issue.</p>
+        </div>
+        
+        <div class="font-sample montserrat-test">
+            <h3>Montserrat Font Test</h3>
+            <p>This text should be displayed in Montserrat font. Check if the font looks different from default.</p>
+        </div>
+        
+        <div id="results" class="test-results">
+            <h3>Waiting for test results...</h3>
+        </div>
+    </div>
+    
+    <script>
+        // Update device info
+        document.getElementById('screen-size').textContent = screen.width + 'x' + screen.height;
+        document.getElementById('viewport-size').textContent = window.innerWidth + 'x' + window.innerHeight;
+        document.getElementById('user-agent').textContent = navigator.userAgent;
+        document.getElementById('connection-type').textContent = 
+            'connection' in navigator ? (navigator.connection.effectiveType || 'unknown') : 'unavailable';
+    </script>
+</body>
+</html> 

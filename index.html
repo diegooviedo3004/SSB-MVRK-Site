@@ -11,6 +11,44 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/All Favicons/android-chrome-512x512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The Salesforce Solopreneur Blueprint - Course, Coaching, and Community for Salesforce experts ready to create their own business." />
+    
+    <!-- Enhanced font loading for mobile performance -->
+    <!-- DNS prefetch for faster connection -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Preconnect with resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical font preload for mobile -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- Fallback for font loading -->
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+    
+    <!-- Inline font loading script for mobile optimization -->
+    <script>
+      // Font loading optimization for mobile
+      if ('fonts' in document) {
+        document.fonts.ready.then(function () {
+          document.documentElement.className += ' fonts-loaded';
+        });
+      }
+      
+      // Fallback font loading after 3 seconds for slow connections
+      setTimeout(function() {
+        if (!document.documentElement.className.includes('fonts-loaded')) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap';
+          document.head.appendChild(link);
+        }
+      }, 3000);
+    </script>
+    
     <title>The Salesforce Solopreneur Blueprint</title>
   </head>
   <body>
