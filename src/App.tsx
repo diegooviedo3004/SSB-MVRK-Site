@@ -360,7 +360,7 @@ function App() {
                   <div className="mb-4 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#63D7E4]/20 to-[#00BDC9]/30 relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#63D7E4]/10 to-[#00BDC9]/10 animate-pulse"></div>
-                                              <CustomIcon name="Community" className="w-14 h-14 brightness-0 invert relative z-10 -mt-1 ml-1" />
+                                              <CustomIcon name="Community" className="w-14 h-14 brightness-0 invert relative z-10 -mt-2 ml-2" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#63D7E4] text-center font-montserrat">Community</h3>
