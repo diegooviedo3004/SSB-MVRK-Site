@@ -99,11 +99,7 @@ function App() {
             
             {/* Subtitle with MVRK Line */}
             <motion.div variants={item} className="mb-16">
-              <a href="#ready" className="inline-block">
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 font-poppins hover:text-[#63D7E4] transition-colors duration-300 cursor-pointer">
-                  Next Cohort Starting Fall 2025
-                </p>
-              </a>
+
               <div className="w-32 h-1 bg-gradient-to-r from-[#00BDC9] to-[#63D7E4] mx-auto"></div>
             </motion.div>
 
@@ -989,7 +985,7 @@ function App() {
               When you are in, you are in for life.
             </p>
             <p className="text-base text-gray-300 leading-relaxed tracking-wide font-poppins">
-              To see if you are ready to join the next cohort, we have developed a self-assessment which will give you an understanding of the criteria we use to gauge readiness.
+              To see if you are ready to join the community, we have developed a self-assessment which will give you an understanding of the criteria we use to gauge readiness.
             </p>
           </motion.div>
           
